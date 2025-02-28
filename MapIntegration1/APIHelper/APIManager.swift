@@ -412,18 +412,14 @@ public enum TaskAnswer<T> {
                 } else {
                     if let convertedJsonIntoDict = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] {
                         print("Json2\(convertedJsonIntoDict)")
-                        let successStr = convertedJsonIntoDict["code"] as? String
-                        if successStr == "success"
+                        let successStr = convertedJsonIntoDict["status"] as? String
+                        if successStr == "SUCCESS"
                         {
                             completion?(TaskAnswer.result(convertedJsonIntoDict))
-                            if(loaderShow == true){
-                            }
+                           
                         }
                         else
                         {
-                            
-                            
-                            
                                 let delegate = UIApplication.shared.delegate as! AppDelegate
                                 var errorString : String = ""
                                 if delegate.validateResponse(convertedJsonIntoDict)
@@ -468,7 +464,7 @@ public enum TaskAnswer<T> {
                                     }
                                     else
                                     {
-                                        errorString = (convertedJsonIntoDict["errors"] as? String)!
+                                        return
                                     }
                                     
                                     

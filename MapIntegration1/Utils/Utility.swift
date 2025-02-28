@@ -13,11 +13,11 @@ final class Utility{
         return URL(string: "https://api.olamaps.io/tiles/vector/v1/styles/default-light-standard/style.json")!
     }
     class func getApiKey() -> String{
-        return "3a49c1b1-c5fa-4754-b4ea-51ca77758dcc"
+        return "axLfy5EnHjCgtT6mayvqNUJsPemSbNdSr6LvMaGK"
     }
     
     class func getProjectId() -> String{
-        return "axLfy5EnHjCgtT6mayvqNUJsPemSbNdSr6LvMaGK"
+        return "3a49c1b1-c5fa-4754-b4ea-51ca77758dcc"
     }
     
 }
