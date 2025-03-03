@@ -13,7 +13,6 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var polylineMapButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
           
